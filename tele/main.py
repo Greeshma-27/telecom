@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 
 # Load the dataset (replace 'your_dataset.csv' with your actual dataset)
 df = pd.read_csv('Churn.csv')
-st.write("DataFrame Columns:", df.columns)
+
 
 # Features and target variable
 numeric_features = ['Al','Total_day_minutes','Total_day_calls','Total_day_charge','Total_night_minutes','Total_night_calls','Total_night_charge','Customer_service_calls']
