@@ -58,5 +58,8 @@ Customer_service_calls = st.number_input('Customer_service_calls', min_value=0, 
 # Predict button
 if st.button('Predict Churn'):
     prediction = predict_popularity(Al,Total_day_minutes,Total_day_calls,Total_day_charge,Total_night_minutes,Total_night_calls,Total_night_charge,Customer_service_calls)
-    st.success(f'Predicted Popularity: {prediction}')
+    if prediction:
+        st.success('Predicted result: The employee is ready to churn.')
+    else:
+        st.success('Predicted result: The employee is not ready to churn.')
 
